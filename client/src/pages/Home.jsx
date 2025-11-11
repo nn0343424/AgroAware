@@ -28,8 +28,8 @@ export default function Home() {
         {/* 1) HERO — full-bleed background, centered content */}
         <section id="hero" className="relative isolate" style={{ minHeight: "78vh" }}>
           <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop"
-            alt="Fields"
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop"
+            alt="Agricultural fields"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -91,25 +91,17 @@ export default function Home() {
                   <li>Voice assistant (KN/HI/TE) <Badge>Coming Soon</Badge></li>
                 </ul>
               </div>
+
+              {/* Updated About images (2 only) */}
               <div className="grid grid-cols-2 gap-3">
                 <img
-                  src="https://images.unsplash.com/photo-1589927986089-35812388d1ab?q=80&w=1200&auto=format&fit=crop"
-                  alt="Irrigated field"
+                  src="https://images.pexels.com/photos/175389/pexels-photo-175389.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Farmer in field"
                   className="h-40 w-full rounded-xl object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?q=80&w=1200&auto=format&fit=crop"
-                  alt="Village meeting"
-                  className="h-40 w-full rounded-xl object-cover"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1523496922380-91c4b7a0b0bb?q=80&w=1200&auto=format&fit=crop"
+                  src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?auto=compress&cs=tinysrgb&w=1200"
                   alt="Soil testing"
-                  className="h-40 w-full rounded-xl object-cover"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1545464333-9f0b5f6f8b48?q=80&w=1200&auto=format&fit=crop"
-                  alt="Farmer checking crops"
                   className="h-40 w-full rounded-xl object-cover"
                 />
               </div>
@@ -126,8 +118,8 @@ export default function Home() {
                 { icon: "🌾", title: "Smart Crop Advisory", desc: "Use N-P-K, pH, temperature & rainfall to get a crop + confidence." },
                 { icon: "🧭", title: "Beginner Mode", desc: "No soil test? Select district & season to see suitable crops." },
                 { icon: "🎨", title: <>Gen-AI Posters <Badge>Coming Soon</Badge></>, desc: "Instant awareness posters, slogans & tips." },
-                { icon: "🏛️", title: <>Scheme Simplifier <Badge>Coming Soon</Badge></>, desc: "Plain-language summaries of government schemes." },
-                { icon: "🗣️", title: <>Voice Assistant <Badge>Coming Soon</Badge></>, desc: "Ask in Kannada/Hindi/Telugu and hear answers." },
+                { icon: "🏛", title: <>Scheme Simplifier <Badge>Coming Soon</Badge></>, desc: "Plain-language summaries of government schemes." },
+                { icon: "🗣", title: <>Voice Assistant <Badge>Coming Soon</Badge></>, desc: "Ask in Kannada/Hindi/Telugu and hear answers." },
                 { icon: "🌐", title: <>Multilingual UI <Badge>Coming Soon</Badge></>, desc: "Localized UI & content for rural outreach." },
               ].map((f) => (
                 <div key={(typeof f.title === "string" ? f.title : "item") + f.icon} className="card">
@@ -161,23 +153,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5) GALLERY */}
+        {/* 5) GALLERY (your 1, 4, 6 picks) */}
         <section id="gallery" className="bg-green-50">
           <div className="mx-auto max-w-6xl px-6 py-14">
             <h2 className="text-center text-2xl font-bold text-green-800">Field Gallery</h2>
-            <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-              {[
-                "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1472141341085-d3f2ba4e8844?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1563114776-45f4a5c0e2ab?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1617137968427-85924c800a20?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1519066629447-267fffa62d5b?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1528137347926-610c9f6f9c7b?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1545468785-5300c8d13cd8?q=80&w=1200&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1592800965248-cd3fc8b7ea01?q=80&w=1200&auto=format&fit=crop",
-              ].map((src, i) => (
-                <img key={i} src={src} alt={`Farm gallery ${i + 1}`} className="h-40 w-full rounded-xl object-cover" />
-              ))}
+
+            <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+              <img
+                src="https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Field Cultivation"
+                className="h-56 w-full rounded-xl object-cover shadow"
+              />
+              <img
+                src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Farmers at Work"
+                className="h-56 w-full rounded-xl object-cover shadow"
+              />
+              <img
+                src="https://images.pexels.com/photos/129574/pexels-photo-129574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Crop Fields"
+                className="h-56 w-full rounded-xl object-cover shadow"
+              />
             </div>
           </div>
         </section>
@@ -190,7 +186,7 @@ export default function Home() {
               <div className="aspect-video overflow-hidden rounded-xl shadow">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+                  src="https://www.youtube.com/embed/2Vv-BfVoq04g"
                   title="AI in Agriculture - Explainer"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -276,14 +272,14 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📞</span>
-                  <span>+91 90000 12345</span>
+                  <span>+91 9945469518</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📍</span>
-                  <span>Department Lab, Your College, Karnataka</span>
+                  <span>Department Lab,NMIT, Karnataka</span>
                 </div>
                 <div className="rounded-xl border bg-green-50 p-4 text-sm text-gray-700">
-                  For review day, we can provide a demo account, sample soil values, and a short walkthrough PPT.
+                  
                 </div>
               </div>
             </div>

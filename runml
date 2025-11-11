@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# runml - convenience wrapper to start the ml_service from the repo root
+# Usage: /path/to/runml [PORT]
+
+ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SERVICE_DIR="$ROOT_DIR/ml_service"
+
+if [ ! -f "$SERVICE_DIR/start.sh" ]; then
+  echo "start.sh not found in $SERVICE_DIR. Are you in the expected repo?" >&2
+  exit 2
+fi
+
+# Forward any arguments (e.g., port)
+exec "$SERVICE_DIR/start.sh" "$@"

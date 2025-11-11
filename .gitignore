@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.venv/
+venv/
+ENV/
+.env
+.env.*
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+.history/
+
+# Node
+node_modules/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Data & Models
+ml_service/models/
+ml_service/reports/
+ml_service/data/*.csv
+ml_service/data/*.xlsx
+ml_service/data/*.json
+
+# Sensitive
+*.key
+*.pem
+*.crt
+*.pfx
+*.env
+secrets.*
+
+# Logs
+*.log
+nohup.out
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.bak
+*.swp
+*.tmp
+
+# Ignore large files
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# Ignore test outputs
+/test-outputs/
+
+# Ignore embedded repo directory
+AgroAware/

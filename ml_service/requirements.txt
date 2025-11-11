@@ -1,6 +1,13 @@
+
 fastapi
 uvicorn
 pandas
+numpy
 scikit-learn
+xgboost
+optuna
 joblib
-
+pydantic
+python-multipart
+matplotlib
+seaborn

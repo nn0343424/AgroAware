@@ -1,4 +1,4 @@
-#!/home/adithya/agroaware/ml_service/.venv/bin/python3
+#!/home/adithya/agroaware/ml_service/.venv/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys
