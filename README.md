@@ -64,6 +64,16 @@ pip install -r requirements.txt
 uvicorn api:app --host 0.0.0.0 --port 8800 --reload
 ```
 
+## ML Model Setup
+
+The trained model is not stored in the repository.
+
+To generate it:
+```bash
+cd ml_service
+python train.py
+
+
 ### 4. Node.js Backend
 ```bash
 cd server
